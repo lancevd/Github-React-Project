@@ -8,7 +8,6 @@ const RepoDetails = () => {
   const [repoContent, setRepoContent] = useState([])
 
   let params = new URLSearchParams(location);
-  const videoID = params.get('watchid')
   const repoName = params.get('name')
 
   useEffect(() =>{
@@ -28,7 +27,7 @@ const RepoDetails = () => {
       <h1>{repoName}</h1>
       <StatBoxes/>
       <h3 className='mb-3'>Repository Details</h3>
-      <div className='row container'>
+      <div className='repo-details-grid container'>
         <RepoCardFiles />
         <RepoCardAbout />
       </div>

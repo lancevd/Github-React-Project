@@ -29,7 +29,7 @@ const StatBoxes = () => {
         }
     )}  
     fetchRepos()
-},[])
+},[repoName])
 
 useEffect(() =>{
   const fetchRepos = async () =>{
@@ -39,7 +39,7 @@ useEffect(() =>{
       }
   )}  
   fetchRepos()
-},[])
+},[repoName])
 
 useEffect(() =>{
   const fetchRepos = async () =>{
@@ -49,7 +49,7 @@ useEffect(() =>{
       }
   )}  
   fetchRepos()
-},[])
+},[repoName])
 
 useEffect(() =>{
   const fetchRepos = async () =>{
@@ -60,7 +60,7 @@ useEffect(() =>{
       }
   )}  
   fetchRepos()
-},[])
+},[repoName])
 
 useEffect(() =>{
   const fetchRepos = async () =>{
@@ -71,7 +71,7 @@ useEffect(() =>{
       }
   )}  
   fetchRepos()
-},[])
+},[repoName])
 
   return (
     <div className='stat-boxes'>

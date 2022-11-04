@@ -132,6 +132,25 @@ body {
   padding: 5px 10px;
 }
 
+/* REPO DETAILS  */
+
+.repo-details-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.repo-card-files {
+  grid-column: 1/8;
+  width: 100%;
+  
+}
+
+.repo-card-about{
+  grid-column:8/-1 ;
+  width: 100%;
+}
+
 @media screen and (max-width:768px) {
   .account {
     grid-template-columns: repeat(1, 1fr);
