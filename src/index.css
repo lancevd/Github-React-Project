@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:#5972FD;
+  --primary: #3664FD;
+  --secondary: #1B42EB;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  /* overflow: hidden ; */
+}
+
+.App {
+  height: 100vh;
+  /* overflow: hidden  */
+}
+
+.account {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  height: 100%;
+  
+}
+
+/* Home Page */
+
+.Home {
+  background: var(--bg);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Home h1 {
+  font-size: 48px;
+  color: #fff;
+}
+
+.Home button {
+  background: #fff;
+  color: var(--secondary);
+}
+
+.Home button:hover {
+  border: solid #fff;
+  color: #fff;
+}
+
+/* Profile section */
+
+.profile{
+  background: var(--primary);
+  height: 100vh;
+  box-shadow: 2px 14px 20px;
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  color: #fff;
+}
+
+#profile-pic {
+  width: 10rem;
+  height: 10rem;
+  border: #fff solid;
+  border-radius: 50%;
+}
+
+.profile button {
+  background: #fff;
+  color: var(--secondary);
+}
+
+.profile button:hover {
+  border: solid #fff;
+  color: #fff;
+}
+
+#user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.output{
+  /* background-color: red; */
+  width: 95%;
+  grid-column: 4/-1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card {
+  box-shadow: 1px 1px 10px #25252518;
+  overflow: hidden;
+}
+
+.cards {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.repo-details {
+  grid-column: 4/-1;
+}
+
+.stat-boxes {
+  padding: 1rem ;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.stat-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.195);
+  padding: 5px 10px;
+}
+
+@media screen and (max-width:768px) {
+  .account {
+    grid-template-columns: repeat(1, 1fr);
+    overflow: scroll;
+  }
+
+  .profile {
+    height: fit-content;
+  }
+
+  .output, .repo-details {
+    overflow: scroll;
+  }
+
+  .repo-card-files {
+    /* margin-right: 50px; */
+  }
+}
+
+
+/* Pagination */
+
+.pagination {
+  display: flex; 
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: var(--primary);
+}
+
+.pagination button:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.pagination .active {
+  background: var(--secondary);
+  color: #fff;
+}
+
+button:disabled {
+  background: grey;
+  color: #fff;
+}
