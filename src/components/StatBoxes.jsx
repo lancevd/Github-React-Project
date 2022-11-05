@@ -55,7 +55,6 @@ useEffect(() =>{
   const fetchRepos = async () =>{
       const results = await fetch(`https://api.github.com/repos/lancevd/${repoName}/topics`)
       results.json().then(data => {
-      console.log(data.names)
       setRepoTopics(data.names)
       }
   )}  

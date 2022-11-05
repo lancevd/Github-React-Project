@@ -74,6 +74,14 @@ body {
   height: 10rem;
   border: #fff solid;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#profile-pic img{
+  width: 100%; 
 }
 
 .profile button {
@@ -151,25 +159,30 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width:768px) {
-  .account {
-    grid-template-columns: repeat(1, 1fr);
-    overflow: scroll;
-  }
 
-  .profile {
-    height: fit-content;
-  }
-
-  .output, .repo-details {
-    overflow: scroll;
-  }
-
-  .repo-card-files {
-    /* margin-right: 50px; */
-  }
+/* Error Page */
+.error {
+  background: var(--secondary);
+  height: 100vh;
+  display: flex;
+  gap: 5rem;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.error-btns {
+  display: flex;
+  gap: 3rem;
+}
+
+.error button {
+  background: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
 
 /* Pagination */
 
@@ -184,6 +197,7 @@ body {
   border: none;
   border-radius: 5px;
   color: var(--primary);
+  margin-bottom: 1rem;
 }
 
 .pagination button:hover {
@@ -199,4 +213,57 @@ body {
 button:disabled {
   background: grey;
   color: #fff;
+}
+
+
+/* =========== RESPONSIVENESS ============= */
+
+@media screen and (max-width:768px) {
+  .account {
+    grid-template-columns: repeat(1, 1fr);
+    overflow: scroll !important;
+  }
+
+  .profile {
+    height: fit-content;
+    /* overflow: scroll; */
+  }
+
+  .output, .repo-details {
+    /* overflow: scroll; */
+    height: 100vh;
+    grid-column: 1/-1;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .output {
+    overflow: scroll !important;
+  }
+
+  header, .cards {
+    grid-column: 1/-1;
+  }
+
+  .cards {
+    overflow: visible;
+    height: fit-content;
+  }
+
+  .cards .row {
+    overflow: visible;
+  }
+
+  .stat-boxes {
+    flex-wrap: wrap;
+  }
+
+  .repo-details-grid {
+    grid-template-columns: repeat(1, 1fr);
+    height: 100vh;
+    margin-bottom: 1rem;
+  }
+
+  .repo-card-about, .repo-card-files {
+    grid-column: 1/-1;
+  }
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const RepoCardFiles = () => {
-    let location = window.location.search;
+let location = window.location.search;
   const [repoContent, setRepoContent] = useState([])
 
   let params = new URLSearchParams(location);
@@ -11,7 +11,7 @@ const RepoCardFiles = () => {
     const fetchRepos = async () =>{
         const results = await fetch(`https://api.github.com/repos/lancevd/${repoName}/contents`)
         results.json().then(data => {
-        console.log(data)
+        // console.log(data)
         setRepoContent(data)
         }
     )}  
