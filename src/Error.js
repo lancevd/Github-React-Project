@@ -9,7 +9,8 @@ const Error = () => {
         <Helmet>
           <title>GitHub Site | Error</title>
           <meta charSet = 'utf-8' />
-          <meta name="description" content="This is the description of the page" />
+          <meta name="description" content="Page not found" />
+          <link rel="canonical" href='/error' />
         </Helmet>
 
       <div className='error'>

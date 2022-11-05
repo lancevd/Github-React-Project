@@ -9,6 +9,7 @@ const Home = () => {
           <title>GitHub Site | Home</title>
           <meta charSet = 'utf-8' />
           <meta name="description" content="Olamide Winner Mosobalaje's Github project, showcasing GitHub Rest API for users, repositories, commits, etc" />
+          <link rel="canonical" href='/' />
       </Helmet>
 
         <h1 className="text-center">Welcome to Olamide's Profile</h1>

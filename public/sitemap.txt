@@ -1,0 +1,5 @@
+http://sitemap.google.github-react-project.vercel.app/
+http://sitemap.google.github-react-project.vercel.app/account/
+http://sitemap.google.github-react-project.vercel.app/account/repositories
+http://sitemap.google.github-react-project.vercel.app/account/details
+http://sitemap.google.github-react-project.vercel.app/error

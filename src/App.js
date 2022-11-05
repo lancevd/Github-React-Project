@@ -6,18 +6,21 @@ import Output from './sections/Output';
 import Header from './components/Header';
 import Error from './Error';
 import ErrorBoundaryTestPage from './ErrorBoundaryTestPage';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
   return (
     <Router>
-      <div className="App ">
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/account/*' element={<Account />} /> 
-          <Route path='/*' element={<Error/>} />
-          <Route path='/test' element={<ErrorBoundaryTestPage/>} />
-        </Routes>
-      </div>
+      <ErrorBoundary>
+        <div className="App ">
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/account/*' element={<Account />} /> 
+            <Route path='/*' element={<Error/>} />
+            <Route path='/test' element={<ErrorBoundaryTestPage/>} />
+          </Routes>
+        </div>
+      </ErrorBoundary>
     </Router>
   );
 }

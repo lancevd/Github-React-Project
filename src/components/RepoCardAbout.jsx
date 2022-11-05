@@ -19,7 +19,7 @@ const RepoCardAbout = () => {
             }
         )}  
         fetchRepos()
-    },[repoName])
+    },[repoTopics, repoName])
 
     useEffect(() =>{
         const fetchRepos = async () =>{

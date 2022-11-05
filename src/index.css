@@ -142,6 +142,11 @@ body {
 
 /* REPO DETAILS  */
 
+.repo-details {
+  height: 100vh;
+  overflow: scroll;
+}
+
 .repo-details-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
