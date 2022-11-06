@@ -15,7 +15,7 @@ const RepoCardAbout = () => {
             results.json().then(data => {
             setRepoContent(data)
             setRepoTopics(data.topics)
-            console.log(repoTopics)
+            // console.log(repoTopics)
             }
         )}  
         fetchRepos()
@@ -25,7 +25,7 @@ const RepoCardAbout = () => {
         const fetchRepos = async () =>{
             const results = await fetch(`https://api.github.com/repos/lancevd/${repoName}/languages`)
             results.json().then(data => {
-                console.log(data)
+                // console.log(data)
                 setRepoLanguages(data)
             }
         )}  
@@ -45,7 +45,7 @@ const RepoCardAbout = () => {
         <p><b>Languages</b></p>
         {
         Object.keys(repoLanguages).map((repo) => (
-            <p>- {repo}</p>
+            <p key={repo}>- {repo}</p>
         ))
         }
 

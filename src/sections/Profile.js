@@ -17,7 +17,7 @@ const Profile = () => {
   return (
     <div className='profile '>
         <div id='profile-pic'>
-            <img src={`${profile.avatar_url}`} alt='' />
+            <img src={`${profile.avatar_url}`} alt='Olamide Winner Picture' />
         </div>
         <div id='user-details' className='display-flex align-items-center'>
           <h5 id='dev-name' className='mt-2 mb-2'>{profile.name}</h5>

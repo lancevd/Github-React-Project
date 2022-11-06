@@ -14,7 +14,7 @@ const Card = (props) => {
         <div className="card">
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
-                <p className="card-text"><i>{!props.description ? 'No description available for this repository' : props.description}</i></p>
+                <p className="card-text"><i>{!props.description ? 'Click to see more details' : props.description}</i></p>
                 < Link to={`../details?name=${props.name}`} className="btn btn-primary">Open Repository</Link>
             </div>
         </div>

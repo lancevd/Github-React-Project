@@ -27,8 +27,8 @@ let location = window.location.search;
                 <th>Type</th>
             </thead>
             <tbody>
-                {repoContent.map((content) =>(
-                    <tr>
+                {repoContent.map((content, value) =>(
+                    <tr key={value}>
                         <td><a href={`${content.html_url}`}>{content.name}</a></td>
                         <td>{content.type==='dir' ? 'Folder/Directory' : 'File'}</td>
                     </tr>
